@@ -113,7 +113,7 @@ def get_price_function(bot, context):
 
     coin_param = context.args[0]
     if len(context.args) == 2:
-        currency_param = context.args[1]
+        currency_param = context.args[1].lower()
     try:
         coin = get_coin_by_param(coin_param)
         if coin is None:
